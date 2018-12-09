@@ -1,0 +1,20 @@
+--- setup_kinetic.bash	2018-12-08 14:25:04.797495951 +0800
++++ setup_kinetic_new.bash	2018-12-10 07:27:28.525503940 +0800
+@@ -76,10 +76,13 @@
+ vcs import < ../../gazebo.repos
+ 
+ cd ..
+-catkin_make --pkg mav_msgs
+-source devel/setup.bash
+-catkin_make -j 1
+-bash -c 'echo source `pwd`/devel/setup.bash >> ~/.bashrc'
++#catkin_make --pkg mav_msgs
++#source devel/setup.bash
++source $HOME/miniconda3/etc/profile.d/conda.sh
++conda activate openai-gym
++
++catkin_make --cmake-args -DCMAKE_CXX_STANDARD=11
++#bash -c 'echo source `pwd`/devel/setup.bash >> ~/.bashrc'
+ echo "## ROS workspace compiled ##"
+ 
+ # add own models path to gazebo models path
