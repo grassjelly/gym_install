@@ -9,21 +9,25 @@ Conda environment installation files for Gazebo GYM Reinforcement Learning [tool
     sudo apt-get update
     sudo apt-get -y install ros-kinetic-gazebo8*
 
-### 2. Installation:
+### 2. Installation
     git clone https://github.com/grassjelly/gym_install
     cd gym_install
     ./installgym
 
-### 3. Set GUI to true:
+### 3. Gazebo Visualization
+Set gui arg to true:
+
     cd $HOME/gym-gazebo/gym_gazebo/envs/assets/launch
     nano GazeboCircuit2TurtlebotLidar_v0.launch
 
-### 4. Run Turtlebot sample code:
+### 4. Run Turtlebot sample code
+Open a new terminal and run:
+
     gym_ws
     cd $HOME/gym-gazebo/examples/turtlebot
     python circuit2_turtlebot_lidar_qlearn.py
 
-### 5. Troubleshooting:
+### 5. Troubleshooting
 If the sample code runs on Python 2.7 create a new Python 3 conda environment and rebuild the workspace. Once done re-run no. 4.
 
     source $HOME/miniconda3/etc/profile.d/conda.sh
