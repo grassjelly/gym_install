@@ -14,16 +14,16 @@ Conda environment installation files for Gazebo GYM Reinforcement Learning [tool
     cd gym_install
     ./installgym
 
-### Set GUI to true:
+### 3. Set GUI to true:
     cd $HOME/gym-gazebo/gym_gazebo/envs/assets/launch
     nano GazeboCircuit2TurtlebotLidar_v0.launch
 
-### Run Turtlebot sample code:
+### 4. Run Turtlebot sample code:
     gym_ws
     cd $HOME/gym-gazebo/examples/turtlebot
     python circuit2_turtlebot_lidar_qlearn.py
 
-### Troubleshooting:
+### 5. Troubleshooting:
 If the sample code runs on Python 2.7 create a new Python 3 conda environment and rebuild the workspace
 
     source $HOME/miniconda3/etc/profile.d/conda.sh
