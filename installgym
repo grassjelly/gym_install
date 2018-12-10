@@ -6,16 +6,9 @@ GAZEBO_CONFIG_DIR=$(dirname "$(readlink -f "$0")")
 
 source $HOME/miniconda3/etc/profile.d/conda.sh
 
-conda env remove --name openai-gym --yes 
-
 # Create conda environment
 conda create --name openai-gym pip python=3 --yes
 conda activate openai-gym
-
-cd $HOME
-sudo rm -rf /tmp/sophus
-sudo rm -rf gym-gazebo
-sudo rm -rf Theano
 
 # Install ROS Kinetic dependencies
 sudo apt-get -y install \
