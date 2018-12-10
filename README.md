@@ -24,7 +24,7 @@ Conda environment installation files for Gazebo GYM Reinforcement Learning [tool
     python circuit2_turtlebot_lidar_qlearn.py
 
 ### 5. Troubleshooting:
-If the sample code runs on Python 2.7 create a new Python 3 conda environment and rebuild the workspace
+If the sample code runs on Python 2.7 create a new Python 3 conda environment and rebuild the workspace. Once done re-run no. 4.
 
     source $HOME/miniconda3/etc/profile.d/conda.sh
     conda create --name p3-env pip python=3 --yes
