@@ -27,14 +27,3 @@ Open a new terminal and run:
     cd $HOME/gym-gazebo/examples/turtlebot
     python circuit2_turtlebot_lidar_qlearn.py
 
-### 5. Troubleshooting
-If the sample code runs on Python 2.7 create a new Python 3 conda environment and rebuild the workspace. Once done re-run no. 4.
-
-    source $HOME/miniconda3/etc/profile.d/conda.sh
-    conda create --name p3-env pip python=3 --yes
-    conda activate p3-env
-    yes | pip install catkin_pkg rospkg pyyaml empy 
-    cd $HOME/gym-gazebo/gym_gazebo/envs/installation/catkin_ws
-    rm -rf devel
-    rm -rf build
-    catkin_make --cmake-args -DCMAKE_CXX_STANDARD=11
