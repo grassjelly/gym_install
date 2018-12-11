@@ -1,6 +1,6 @@
 --- setup_kinetic.bash	2018-12-08 14:25:04.797495951 +0800
-+++ setup_kinetic_new.bash	2018-12-10 07:27:28.525503940 +0800
-@@ -76,10 +76,13 @@
++++ setup_kinetic_new.bash	2018-12-11 23:55:16.308821703 +0800
+@@ -76,16 +76,19 @@
  vcs import < ../../gazebo.repos
  
  cd ..
@@ -18,3 +18,10 @@
  echo "## ROS workspace compiled ##"
  
  # add own models path to gazebo models path
+ if [ -z "$GAZEBO_MODEL_PATH" ]; then
+   bash -c 'echo "export GAZEBO_MODEL_PATH="`pwd`/../../assets/models >> ~/.bashrc'
+-  exec bash #reload bashrc
++  #exec bash #reload bashrc
+ fi
+ 
+ # # Theano and Keras installation and requisites
