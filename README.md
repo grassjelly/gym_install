@@ -1,5 +1,5 @@
 # gym_install
-Conda environment installation files for Gazebo GYM Reinforcement Learning [toolkit](https://github.com/erlerobot/gym-gazebo) .
+Conda environment installation files for GYM Gazebo Reinforcement Learning [toolkit](https://github.com/erlerobot/gym-gazebo) .
 
 ### 1. Upgrade to Gazebo 8
     sudo apt-get remove ros-kinetic-gazebo* 
