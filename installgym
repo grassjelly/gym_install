@@ -115,6 +115,7 @@ echo "alias killgym='killall -9 rosout roslaunch rosmaster gzserver nodelet robo
 
 source $HOME/gym-gazebo/gym_gazebo/envs/installation/catkin_ws/devel/setup.bash
 cd $HOME/gym-gazebo/gym_gazebo/envs/installation
+patch < turtlebot_setup.patch
 bash turtlebot_setup.bash
 
 # # cd /opt/ros/kinetic/lib/python2.7/dist-packages/ && sudo mv cv2.so cv2_old.so

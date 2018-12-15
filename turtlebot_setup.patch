@@ -1,0 +1,54 @@
+--- turtlebot_setup.bash	2018-12-07 17:38:34.596645066 +0800
++++ turtlebot_setup_new.bash	2018-12-15 20:02:45.283747043 +0800
+@@ -1,9 +1,9 @@
+ #!/bin/bash
+ 
+ if [ -z "$GAZEBO_MODEL_PATH" ]; then
+-  bash -c 'echo "export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:"`pwd`/../assets/models >> ~/.bashrc'
++  bash -c 'echo "export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:"$HOME/gym-gazebo/gym_gazebo/envs/assets/models >> ~/.bashrc'
+ else
+-  bash -c 'sed "s,GAZEBO_MODEL_PATH=[^;]*,'GAZEBO_MODEL_PATH=`pwd`/../assets/models'," -i ~/.bashrc'
++  bash -c 'sed "s,GAZEBO_MODEL_PATH=[^;]*,'GAZEBO_MODEL_PATH=$HOME/gym-gazebo/gym_gazebo/envs/assets/models'," -i ~/.bashrc'
+ fi
+ 
+ #Load turtlebot variables. Temporal solution
+@@ -12,29 +12,29 @@
+ 
+ #add turtlebot launch environment variable
+ if [ -z "$GYM_GAZEBO_WORLD_MAZE" ]; then
+-  bash -c 'echo "export GYM_GAZEBO_WORLD_MAZE="`pwd`/../assets/worlds/maze.world >> ~/.bashrc'
++  bash -c 'echo "export GYM_GAZEBO_WORLD_MAZE="$HOME/gym-gazebo/gym_gazebo/envs/assets/worlds/maze.world >> ~/.bashrc'
+ else
+-  bash -c 'sed "s,GYM_GAZEBO_WORLD_MAZE=[^;]*,'GYM_GAZEBO_WORLD_MAZE=`pwd`/../assets/worlds/maze.world'," -i ~/.bashrc'
++  bash -c 'sed "s,GYM_GAZEBO_WORLD_MAZE=[^;]*,'GYM_GAZEBO_WORLD_MAZE=$HOME/gym-gazebo/gym_gazebo/envs/assets/worlds/maze.world'," -i ~/.bashrc'
+ fi
+ if [ -z "$GYM_GAZEBO_WORLD_CIRCUIT" ]; then
+-  bash -c 'echo "export GYM_GAZEBO_WORLD_CIRCUIT="`pwd`/../assets/worlds/circuit.world >> ~/.bashrc'
++  bash -c 'echo "export GYM_GAZEBO_WORLD_CIRCUIT="$HOME/gym-gazebo/gym_gazebo/envs/assets/worlds/circuit.world >> ~/.bashrc'
+ else
+-  bash -c 'sed "s,GYM_GAZEBO_WORLD_CIRCUIT=[^;]*,'GYM_GAZEBO_WORLD_CIRCUIT=`pwd`/../assets/worlds/circuit.world'," -i ~/.bashrc'
++  bash -c 'sed "s,GYM_GAZEBO_WORLD_CIRCUIT=[^;]*,'GYM_GAZEBO_WORLD_CIRCUIT=$HOME/gym-gazebo/gym_gazebo/envs/assets/worlds/circuit.world'," -i ~/.bashrc'
+ fi
+ if [ -z "$GYM_GAZEBO_WORLD_CIRCUIT2" ]; then
+-  bash -c 'echo "export GYM_GAZEBO_WORLD_CIRCUIT2="`pwd`/../assets/worlds/circuit2.world >> ~/.bashrc'
++  bash -c 'echo "export GYM_GAZEBO_WORLD_CIRCUIT2="$HOME/gym-gazebo/gym_gazebo/envs/assets/worlds/circuit2.world >> ~/.bashrc'
+ else
+-  bash -c 'sed "s,GYM_GAZEBO_WORLD_CIRCUIT2=[^;]*,'GYM_GAZEBO_WORLD_CIRCUIT2=`pwd`/../assets/worlds/circuit2.world'," -i ~/.bashrc'
++  bash -c 'sed "s,GYM_GAZEBO_WORLD_CIRCUIT2=[^;]*,'GYM_GAZEBO_WORLD_CIRCUIT2=$HOME/gym-gazebo/gym_gazebo/envs/assets/worlds/circuit2.world'," -i ~/.bashrc'
+ fi
+ if [ -z "$GYM_GAZEBO_WORLD_CIRCUIT2C" ]; then
+-  bash -c 'echo "export GYM_GAZEBO_WORLD_CIRCUIT2C="`pwd`/../assets/worlds/circuit2c.world >> ~/.bashrc'
++  bash -c 'echo "export GYM_GAZEBO_WORLD_CIRCUIT2C="$HOME/gym-gazebo/gym_gazebo/envs/assets/worlds/circuit2c.world >> ~/.bashrc'
+ else
+-  bash -c 'sed "s,GYM_GAZEBO_WORLD_CIRCUIT2C=[^;]*,'GYM_GAZEBO_WORLD_CIRCUIT2C=`pwd`/../assets/worlds/circuit2c.world'," -i ~/.bashrc'
++  bash -c 'sed "s,GYM_GAZEBO_WORLD_CIRCUIT2C=[^;]*,'GYM_GAZEBO_WORLD_CIRCUIT2C=$HOME/gym-gazebo/gym_gazebo/envs/assets/worlds/circuit2c.world'," -i ~/.bashrc'
+ fi
+ if [ -z "$GYM_GAZEBO_WORLD_ROUND" ]; then
+-  bash -c 'echo "export GYM_GAZEBO_WORLD_ROUND="`pwd`/../assets/worlds/round.world >> ~/.bashrc'
++  bash -c 'echo "export GYM_GAZEBO_WORLD_ROUND="$HOME/gym-gazebo/gym_gazebo/envs/assets/worlds/round.world >> ~/.bashrc'
+ else
+-  bash -c 'sed "s,GYM_GAZEBO_WORLD_ROUND=[^;]*,'GYM_GAZEBO_WORLD_ROUND=`pwd`/../assets/worlds/round.world'," -i ~/.bashrc'
++  bash -c 'sed "s,GYM_GAZEBO_WORLD_ROUND=[^;]*,'GYM_GAZEBO_WORLD_ROUND=$HOME/gym-gazebo/gym_gazebo/envs/assets/worlds/round.world'," -i ~/.bashrc'
+ fi
+ 
+ #copy altered urdf model
